@@ -12,7 +12,7 @@ class Counter extends Component {
     }
     */
     state = {
-        value: this.props.counter.value
+        value: this.props.value
         //imageUrl: 'https://picsum.photos/200'
         //tags: ['tag1', 'tag2', 'tag3']
     };
