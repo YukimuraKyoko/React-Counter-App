@@ -26,7 +26,7 @@ class Counter extends Component {
 
 
     render() {
-        
+        console.log('Counter - Rendered');
 
         return (<React.Fragment>
             <div>

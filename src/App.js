@@ -14,6 +14,19 @@ class App extends Component {
     ]
  };
 
+ constructor(){
+   super();
+   console.log('App - Constructor');
+
+   //this.props can only be accessed if it's passed in constructor(props) and super(props)
+   //this.state = this.props.something; //This is how to set the state directly
+   //this.setState(); //This won't work, because this method can only be called when component is called and placed in the DOM.
+ }
+
+ componentDidMount(){
+   console.log('App - Mounted');
+ }
+
  handleReset = () =>{
   const counters = this.state.counters.map(c => {
       c.value = 0;
@@ -46,6 +59,8 @@ handleDelete = (counterId) =>{
 }
 
   render() { 
+    console.log('App - Rendered');
+
     return (
       <React.Fragment>
       <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length}></NavBar>
