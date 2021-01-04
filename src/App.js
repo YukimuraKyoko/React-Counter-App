@@ -35,6 +35,9 @@ class App extends Component {
   this.setState({counters});
 }
 
+
+//by changing handleIncrement() to an arrow function, we don't
+    //need to create a constructor and binding 'this'
  handleIncrement = counter =>{
   //counters = new Array[] of this.state.counters
   const counters = [...this.state.counters];

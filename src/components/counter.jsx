@@ -18,12 +18,13 @@ class Counter extends Component {
         fontWeight: 'bold'
     }
 
-  
-
-    //by changing handleIncrement() to an arrow function, we don't
-    //need to create a constructor and binding 'this'
-
-
+    componentDidUpdate(prevProps, prevState){
+        console.log('prevProps', prevProps);
+        console.log('prevState', prevState);
+        if(prevProps.counter.value !== this.props.counter.value){
+            //Ajax call and get new data from the server
+        }
+    }
 
     render() {
         console.log('Counter - Rendered');
